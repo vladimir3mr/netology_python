@@ -1,0 +1,39 @@
+#MY:
+list_words = input('Введите список слов через пробел: ').split()
+print (list_words)
+letter = input ('Введите букву: ')
+i=0
+tmp_count = 0
+for word in list_words:
+	while i<= len(list_words):
+		word = list_words[i]
+		if letter in word:
+			tmp_count+=1
+		i+=1
+		break
+
+if tmp_count ==1:
+		print('Буква', letter, 'встречается в', tmp_count, 'слове')
+elif tmp_count ==0:
+	print('Буква',letter, 'ни разу не встречается')
+else:
+	print('Буква', letter, 'встречается в', tmp_count, 'словах')
+
+#final:
+list_words = input('Введите список слов через пробел: ').split()
+letter = input ('Введите букву: ')
+
+def count_letter(list_words, letter):
+	i=0
+	tmp_count = 0
+	for word in list_words:
+		if letter in word:
+			tmp_count+=1
+	return tmp_count
+
+if count_letter ==1:
+		print('Буква', letter, 'встречается в', count_letter(list_words, letter), 'слове')
+elif count_letter ==0:
+	print('Буква',letter, 'ни разу не встречается')
+else:
+	print('Буква', letter, 'встречается в', count_letter(list_words, letter), 'словах')
